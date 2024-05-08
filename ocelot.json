@@ -1,0 +1,28 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/user-service/auth/register",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5205
+        }
+      ],
+      "UpstreamPathTemplate": "/auth/register",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/user-service/auth/login",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5205
+        }
+      ],
+      "UpstreamPathTemplate": "/auth/login",
+      "UpstreamHttpMethod": [ "POST" ]
+    }
+  ]
+}
