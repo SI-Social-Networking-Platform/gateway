@@ -5,8 +5,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5205
+          "Host": "userservice",
+          "Port": 8080
         }
       ],
       "UpstreamPathTemplate": "/auth/register",
@@ -17,8 +17,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5205
+          "Host": "userservice",
+          "Port": 8080
         }
       ],
       "UpstreamPathTemplate": "/auth/login",
@@ -29,8 +29,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5205
+          "Host": "userservice",
+          "Port": 8080
         }
       ],
       "UpstreamPathTemplate": "/follow",
@@ -41,8 +41,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5205
+          "Host": "userservice",
+          "Port": 8080
         }
       ],
       "UpstreamPathTemplate": "/search",
@@ -53,8 +53,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5027
+          "Host": "feedservice",
+          "Port": 8080
         }
       ],
       "UpstreamPathTemplate": "/feed",
@@ -65,8 +65,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5117
+          "Host": "postservice",
+          "Port": 8080
         }
       ],
       "UpstreamPathTemplate": "/post",
@@ -77,8 +77,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5117
+          "Host": "postservice",
+          "Port": 8080
         }
       ],
       "UpstreamPathTemplate": "/post",
@@ -89,11 +89,23 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5117
+          "Host": "postservice",
+          "Port": 8080
         }
       ],
       "UpstreamPathTemplate": "/post/{id}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/post/all",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "postservice",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/post/all",
       "UpstreamHttpMethod": [ "GET" ]
     }
   ]
